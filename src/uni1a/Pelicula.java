@@ -13,7 +13,7 @@ public class Pelicula extends ContenidoAudiovisual {
         this.estudio = estudio;
         this.actores = new ArrayList<>();
     }
-    // Se crea un metodo para a
+    // Se crea un metodo para añadir elementos a la lista
     public void agregarActor(Actor actor) {
     	this.actores.add(actor);
     }
