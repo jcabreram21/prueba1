@@ -51,9 +51,9 @@ public void setNacionalidad(String nacionalidad) {
 	this.nacionalidad = nacionalidad;
 }
 
-
-
-
+public void mostrarDetalles() {
+    System.out.println("Nombre: " + nombre + " \n Edad: " + edad + " \n Altura: " + altura + "m \n Nacionalidad: " + nacionalidad);
+}
 
 
 }

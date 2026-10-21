@@ -7,7 +7,7 @@ package uni1a;
 public class Documental extends ContenidoAudiovisual {
     private String tema;
     private Investigador investigador;
-    public Documental(String titulo, int duracionEnMinutos, String genero, String tema) {
+    public Documental(String titulo, int duracionEnMinutos, String genero, String tema, Investigador investigador) {
         super(titulo, duracionEnMinutos, genero);
         this.tema = tema;
         this.investigador = investigador;
