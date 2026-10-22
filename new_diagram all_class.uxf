@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>2</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>206</y>
+      <w>164</w>
+      <h>62</h>
+    </coordinates>
+    <panel_attributes>uni1a::VideoMusical
+--
+-artista: String
+-compositor: String
+-fechaLanzamiento: String
+-actoresVidMus: ArrayList&lt;Actor&gt;
+--
++VideoMusical(String titulo, int duracionEnMinutos, String genero, String artista, String compositor, String fechaLanzamiento): ctor
++agregarActor(Actor actor): void
++getActoresVidMus(): ArrayList&lt;Actor&gt;
++setActoresVidMus(ArrayList&lt;Actor&gt; actoresVidMus): void
++getArtista(): String
++setArtista(String artista): void
++getCompositor(): String
++setCompositor(String compositor): void
++getFechaLanzamiento(): String
++setFechaLanzamiento(String fechaLanzamiento): void
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>300</y>
+      <w>92</w>
+      <h>58</h>
+    </coordinates>
+    <panel_attributes>uni1a::Actor
+--
+-nombre: String
+-edad: int
+-altura: double
+-nacionalidad: String
+--
++Actor(String nombre, int edad, double altura, String nacionalidad): ctor
++getNombre(): String
++setNombre(String nombre): void
++getEdad(): int
++setEdad(int edad): void
++getAltura(): double
++setAltura(double altura): void
++getNacionalidad(): String
++setNacionalidad(String nacionalidad): void
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>210</y>
+      <w>102</w>
+      <h>58</h>
+    </coordinates>
+    <panel_attributes>/uni1a::ContenidoAudiovisual/
+--
+-contar = 0: int
+-titulo: String
+-duracionEnMinutos: int
+-genero: String
+-id: int
+--
++ContenidoAudiovisual(String titulo, int duracionEnMinutos, String genero): ctor
++getTitulo(): String
++setTitulo(String titulo): void
++getDuracionEnMinutos(): int
++setDuracionEnMinutos(int duracionEnMinutos): void
++getGenero(): String
++setGenero(String genero): void
++getId(): int
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>206</y>
+      <w>158</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>uni1a::Podcast
+--
+-numTemporada: int
+-numEpisodio: int
+-invitado: Investigador
+--
++Podcast(String titulo, int duracionEnMinutos, String genero, int numTemporada, int numEpisodio, Investigador invitado): ctor
++getNumTemporada(): int
++setNumTemporada(int numTemporada): void
++getNumEpisodio(): int
++setNumEpisodio(int numEpisodio): void
++getInvitado(): Investigador
++setInvitado(Investigador invitado): void
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>712</x>
+      <y>276</y>
+      <w>84</w>
+      <h>46</h>
+    </coordinates>
+    <panel_attributes>uni1a::Investigador
+--
+-nombre: String
+-edad: int
+-nacionalidad: String
+--
++Investigador(String nombre, int edad, String nacionalidad): ctor
++getNombre(): String
++setNombre(String nombre): void
++getEdad(): int
++setEdad(int edad): void
++getNacionalidad(): String
++setNacionalidad(String nacionalidad): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>358</y>
+      <w>138</w>
+      <h>38</h>
+    </coordinates>
+    <panel_attributes>uni1a::Documental
+--
+-tema: String
+-investigador: Investigador
+--
++Documental(String titulo, int duracionEnMinutos, String genero, String tema, Investigador investigador): ctor
++getInvestigador(): Investigador
++setInvestigador(Investigador investigador): void
++getTema(): String
++setTema(String tema): void
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>556</x>
+      <y>310</y>
+      <w>116</w>
+      <h>38</h>
+    </coordinates>
+    <panel_attributes>uni1a::SerieDeTV
+--
+-temporadas: ArrayList&lt;Temporada&gt;
+-totalTemporadas: int
+--
++SerieDeTV(String titulo, int duracionEnMinutos, String genero, int totalTemporadas): ctor
++getTemporadas(): ArrayList&lt;Temporada&gt;
++setTemporadas(ArrayList&lt;Temporada&gt; temporadas): void
++getTotalTemporadas(): int
++setTotalTemporadas(int totalTemporadas): void
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>400</y>
+      <w>104</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>uni1a::Pelicula
+--
+-estudio: String
+-actores: ArrayList&lt;Actor&gt;
+--
++Pelicula(String titulo, int duracionEnMinutos, String genero, String estudio): ctor
++agregarActor(Actor actor): void
++getEstudio(): String
++setEstudio(String estudio): void
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>572</x>
+      <y>382</y>
+      <w>74</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>uni1a::Temporada
+--
+-numTemporada: int
+-numCapitulos: int
+--
++Temporada(int numTemporada, int numCapitulos): ctor
++getNumTemporada(): int
++setNumTemporada(int numTemporada): void
++getNumCapitulos(): int
++setNumCapitulos(int numCapitulos): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>442</y>
+      <w>34</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>poo::PruebaAudioVisual
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>602</x>
+      <y>206</y>
+      <w>20</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>662</x>
+      <y>232</y>
+      <w>32</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>662</x>
+      <y>268</y>
+      <w>42</w>
+      <h>94</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;450.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>228</y>
+      <w>40</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>268</y>
+      <w>100</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>480.0;10.0;10.0;660.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>608</x>
+      <y>268</y>
+      <w>6</w>
+      <h>46</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>752</x>
+      <y>254</y>
+      <w>6</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>754</x>
+      <y>320</y>
+      <w>6</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>754</x>
+      <y>272</y>
+      <w>8</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>0..*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>756</x>
+      <y>322</y>
+      <w>8</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>0..*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>754</x>
+      <y>254</y>
+      <w>10</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>1..*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>756</x>
+      <y>354</y>
+      <w>10</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>1..*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>266</y>
+      <w>6</w>
+      <h>38</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>356</y>
+      <w>6</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;220.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>416</x>
+      <y>358</y>
+      <w>10</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>1..*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>416</x>
+      <y>296</y>
+      <w>10</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>1..*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>418</x>
+      <y>396</y>
+      <w>10</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>0..*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>418</x>
+      <y>268</y>
+      <w>10</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>0..*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>606</x>
+      <y>346</y>
+      <w>6</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>610</x>
+      <y>348</y>
+      <w>8</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>608</x>
+      <y>378</y>
+      <w>10</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>1..*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>608</x>
+      <y>358</y>
+      <w>46</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>Relacion de composición, se usó
+este símbolo ya que no se halló el 
+especificado en el material 
+de la clase</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
