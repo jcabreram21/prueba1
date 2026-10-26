@@ -8,18 +8,22 @@ public class SerieDeTV extends ContenidoAudiovisual {
     
     private ArrayList<Temporada> temporadas;
     private int totalTemporadas;
-    
     public SerieDeTV(String titulo, int duracionEnMinutos, String genero, int totalTemporadas) {
         super(titulo, duracionEnMinutos, genero);
         this.temporadas = new ArrayList<>();
     
     }
 
+    public void agregarTemporada(Temporada temporada ) {
+        this.temporadas.add(temporada);
+    }
 
     public ArrayList<Temporada> getTemporadas() {
 		return temporadas;
-	}
+	
+    
 
+    }
 
     public void setTemporadas(ArrayList<Temporada> temporadas) {
 		this.temporadas = temporadas;
@@ -44,6 +48,6 @@ public class SerieDeTV extends ContenidoAudiovisual {
         System.out.println("Duración en minutos: " + getDuracionEnMinutos());
         System.out.println("Género: " + getGenero());
         System.out.println("Temporadas: " + this.totalTemporadas);
-        System.out.println();
+      
     }
 }

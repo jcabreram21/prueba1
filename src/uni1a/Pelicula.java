@@ -14,9 +14,9 @@ public class Pelicula extends ContenidoAudiovisual {
         this.actores = new ArrayList<>();
     }
     // Se crea un metodo para añadir elementos a la lista
-    public void agregarActor(Actor actor) {
-    	this.actores.add(actor);
-    }
+    public void agregarActores(Actor... actores) {
+        for (Actor actor : actores) {
+            this.actores.add(actor);}}
     public String getEstudio() {
         return estudio;
     }

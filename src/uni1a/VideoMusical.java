@@ -6,16 +6,15 @@ public class VideoMusical extends ContenidoAudiovisual {
 	private String fechaLanzamiento;
 	private ArrayList<Actor> actoresVidMus;
 	// Se crea el método de la clase
-	public VideoMusical(String titulo, int duracionEnMinutos, String genero, String artista, String compositor, String fechaLanzamiento) {
+	public VideoMusical(String titulo, int duracionEnMinutos, String genero, String artista ) {
 		super(titulo, duracionEnMinutos, genero);
 		this.artista = artista;
-		this.compositor = compositor;
-		this.fechaLanzamiento = fechaLanzamiento;
 		this.actoresVidMus = new ArrayList<>();
 	}
 
-	public void agregarActor(Actor actor) {
-        this.actoresVidMus.add(actor);
+    public void agregarActores(Actor... actores) {
+        for (Actor actor : actores) {
+            this.actoresVidMus.add(actor);}
     }
 	
 	public ArrayList<Actor> getActoresVidMus() {

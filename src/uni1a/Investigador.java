@@ -8,6 +8,7 @@ public class Investigador {
 public Investigador(String nombre,int edad, String nacionalidad) {
 	this.nombre = nombre;
 	this.edad = edad;
+	this.nacionalidad = nacionalidad;
 }
 
 // Se crean los métodos getters y setters

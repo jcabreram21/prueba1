@@ -1,13 +1,17 @@
 package uni1a;
+import java.util.ArrayList;
 // Se crea la clase
 public class Temporada {
 	private int numTemporada;
 	private int numCapitulos;
-// Se crea el constructor
+	private ArrayList<Temporada> temporadas = new ArrayList<>();
+// Se crea el constructor y metodo que se usarán posteriormente
 public Temporada(int numTemporada, int numCapitulos ) {
 	this.numTemporada = numTemporada;
 	this.numCapitulos = numCapitulos;
 	}
+
+
 // Se crean los métodos getters y setters
 public int getNumTemporada() {
 	return numTemporada;
