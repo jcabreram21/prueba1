@@ -1,4 +1,4 @@
-package uni1a;
+package ups.soft.poo.tarea_u2;
 
 public abstract class ContenidoAudiovisual {
     private static int contar = 0;
@@ -6,7 +6,8 @@ public abstract class ContenidoAudiovisual {
     private int duracionEnMinutos;
     private String genero;
     private int id;
-
+    
+    // Se cres el constructor
     public ContenidoAudiovisual(String titulo, int duracionEnMinutos, String genero) {
         this.id = contar++;
         this.titulo = titulo;
@@ -14,7 +15,7 @@ public abstract class ContenidoAudiovisual {
         this.genero = genero;
     }
 
-    // Getter y Setter para el campo 'titulo'
+    // Se crean los metodos getters y setters 
     public String getTitulo() {
         return titulo;
     }
@@ -23,7 +24,7 @@ public abstract class ContenidoAudiovisual {
         this.titulo = titulo;
     }
 
-    // Getter y Setter para el campo 'duracionEnMinutos'
+   
     public int getDuracionEnMinutos() {
         return duracionEnMinutos;
     }
@@ -32,7 +33,7 @@ public abstract class ContenidoAudiovisual {
         this.duracionEnMinutos = duracionEnMinutos;
     }
 
-    // Getter y Setter para el campo 'genero'
+   
     public String getGenero() {
         return genero;
     }
@@ -41,10 +42,6 @@ public abstract class ContenidoAudiovisual {
         this.genero = genero;
     }
 
-    // Getter para el campo 'id' (no se proporciona el Setter ya que 'id' se asigna en el constructor y parece ser inmutable)
-    public int getId() {
-        return id;
-    }
     
     public abstract void mostrarDetalles();
     

@@ -1,4 +1,4 @@
-package uni1a;
+package ups.soft.poo.tarea_u2;
 // Se crea la clase
 public class Investigador {
 	private String nombre;
@@ -40,10 +40,8 @@ public String getNacionalidad() {
 public void setNacionalidad(String nacionalidad) {
 	this.nacionalidad = nacionalidad;
 }	
-
+// Se crea el metodo para mosrar los detalles.
 public void mostrarInvestigador() {
-    System.out.println("   * Nombre: " + nombre);
-    System.out.println("   * Edad: " + edad);
-    System.out.println("   * Nacionalidad: " + nacionalidad);
+    System.out.println(" \n  * Nombre: " + nombre + " ( Edad: " + edad +", Nacionalidad: " + nacionalidad + ")");
    }
 }

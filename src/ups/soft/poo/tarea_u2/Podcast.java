@@ -1,4 +1,4 @@
-package uni1a;
+package ups.soft.poo.tarea_u2;
 
 
 
@@ -6,6 +6,7 @@ public class Podcast extends ContenidoAudiovisual {
 	private int numTemporada;
 	private int numEpisodio;
 	private Investigador invitado;
+	
 	// Se crea el constructor de la clase
 	public Podcast(String titulo, int duracionEnMinutos, String genero, int numTemporada, int numEpisodio, Investigador invitado) {
 		super(titulo, duracionEnMinutos, genero);
@@ -38,15 +39,15 @@ public class Podcast extends ContenidoAudiovisual {
 	public void setInvitado(Investigador invitado) {
 		this.invitado = invitado;
 	}
-
+    // Se configura el metodo para mostrar detalles del podcast y del investigador invitado
 	@Override
 	public void mostrarDetalles() {
-		System.out.println("---------- DETALLE DEL PODCAST ----------\n" + "Título: " + getTitulo() + "\n" +
+		System.out.println("Detalle del podcast:\n\n" + "Título: " + getTitulo() + "\n" +
 				"Duración: " + getDuracionEnMinutos() + " min\n" + "Género: " + getGenero() + "\n" +
 				"Temporada: " + numTemporada + "\n" + "Episodio: " + numEpisodio);
 	    if(invitado != null) {
 	    	
-	    	System.out.println("Invitado: " + invitado.getNombre() + "   (" + invitado.getNacionalidad() + "," + invitado.getEdad() + " años )");
+	    	System.out.println("Invitado: " + invitado.getNombre() + "   (Nacionalidad:" + invitado.getNacionalidad() + ", Edad:" + invitado.getEdad() + " años )");
                              }
 	    }
 	}

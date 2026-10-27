@@ -1,4 +1,4 @@
-package uni1a;
+package ups.soft.poo.tarea_u2;
 // Se crea la clase actor
 public class Actor {
 private String nombre;
@@ -50,9 +50,9 @@ public String getNacionalidad() {
 public void setNacionalidad(String nacionalidad) {
 	this.nacionalidad = nacionalidad;
 }
-
+// Se crea el metodo para mostrar los detalles
 public void mostrarDetalles() {
-    System.out.println("Nombre: " + nombre + " \n Edad: " + edad + " \n Altura: " + altura + "m \n Nacionalidad: " + nacionalidad);
+    System.out.println("Nombre: " + nombre + " \n -Edad: " + edad + " \n -Altura: " + altura + "m \n -Nacionalidad: " + nacionalidad);
 }
 
 

@@ -1,6 +1,8 @@
-package poo;
-import uni1a.*;
+package ups.soft.poo.tarea_u2.prueba_audiovisual;
 import java.util.Scanner;
+
+import ups.soft.poo.tarea_u2.*;
+
 import java.util.ArrayList;
 public class PruebaAudioVisual {
 	public static void main(String[] args) {
@@ -20,7 +22,7 @@ public class PruebaAudioVisual {
         // Instancias de la subclase pelicula y actor.
       Pelicula peliculaThMa = new Pelicula("The Matrix", 136, "Ciencia Ficcion", "Warner Bros");
       Actor keanuReeves = new Actor("Keanu Reeves", 62, 1.86, "Canadiense");
-      Actor carrieAnneMoss = new Actor("Carrie Anne Moss", 56, 1.70, "Canadiense");
+      Actor carrieAnneMoss = new Actor("Carrie Anne Moss", 56, 1.71, "Canadiense");
       Actor laurenceFishburne = new Actor("Laurence Fishburne", 64, 1.84, "Estadounidense");
       peliculaThMa.agregarActores(keanuReeves, carrieAnneMoss, laurenceFishburne);
       listaPeliculas.add(peliculaThMa);
@@ -85,25 +87,27 @@ public class PruebaAudioVisual {
 
     	
     	
-    	// Se crea la interfaz
+    	// Se empieza a diseñar la interfaz
       System.out.println("======== PRUEBA DE FUNCIONAMIENTO ========");
       System.out.println("Hola, puedes elegir entre Peliculas, Series, Documentales, Videos Musicales o Podcasts.\n");
       System.out.println("Menu de eleccion:\n1. Peliculas.\n2. Series.\n3. Documentales.\n4. Videos Musicales.\n5. Podcasts.\n6. Salir");
       int eleccion = validacionIngresos(entrada);
       boolean validacion = true;
-      
+       
+       // Se valida que el numero ingresado este dentro del rango.
       while (eleccion < 1 || eleccion > 6) {
     	    System.out.println("Ingrese un valor correcto!");
-    	    System.out.print("Elige una opcion valida: ");
+    	  
     	    eleccion = validacionIngresos(entrada);
     	    validacion = false;
       }
-      
+      // Se coloca la opcion para terminar el progrma.
       if (eleccion == 6) {
       		System.out.println("Adios, vuelve pronto!");
       }
           if(validacion == true || eleccion != 6); {
       	
+        	  // Se muestran los menus disponibles y se muestran los detalles segun se elija la opcion, usando los respectivos métodos.
       		  switch (eleccion) {
       		  case 1:
       		      System.out.println("\nLista de Peliculas:");
@@ -111,95 +115,117 @@ public class PruebaAudioVisual {
       		              System.out.println((i + 1) + ". " + listaPeliculas.get(i).getTitulo());
       	              }
       		    
-      		              System.out.print("Elige el número de la película que deseas ver: ");
+      		              System.out.print("Elige el número de la película que deseas ver:\n ");
       		              int seleccionPel = validacionIngresos(entrada);
-      		    
+      		              if (seleccionPel == 6) {
+		                	  System.out.println("Adios! Vuelve pronto");
+		                      break;}
+		                      
       		   
-      		    	      while (seleccionPel < 1 || seleccionPel > listaPeliculas.size()) {
-      		    		      System.out.println("Error! Valor ingresado erroneo, elige un número de la lista:");
-      		    		      seleccionPel = validacionIngresos(entrada);
+      		    	          while (seleccionPel < 1 || seleccionPel > listaPeliculas.size()) {
+      		    		          System.out.println("Error! Valor ingresado erroneo, elige un número de la lista:");
+      		    		          seleccionPel = validacionIngresos(entrada);
       		       
-      		              }
-      		                  Pelicula pelElegida = listaPeliculas.get(seleccionPel - 1);
-                              pelElegida.mostrarDetalles();
-             
-      		    break;
-      			
+      		                  }
+      		                      Pelicula pelElegida = listaPeliculas.get(seleccionPel - 1);
+                                  pelElegida.mostrarDetalles();
+                 break;
+      		  
       		  case 2:
       		      System.out.println("\nLista de Series:");
   		              for (int i = 0; i < listaSeries.size(); i++) {
   		                  System.out.println((i + 1) + ". " + listaSeries.get(i).getTitulo());
-  	              }
+  	                  }
   		    
-  		                  System.out.print("Elige el número de la serie que deseas ver: ");
+  		                  System.out.print("Elige el número de la serie que deseas ver:\n ");
   		                  int seleccionSerie = validacionIngresos(entrada);
-  		    
+  		                  if (seleccionSerie == 6) {
+		                	  System.out.println("Adios! Vuelve pronto");
+		                      break;}
+		                      
   		   
-  		    	          while (seleccionSerie < 1 || seleccionSerie > listaSeries.size()) {
-  		    		      System.out.println("Error! Valor ingresado erroneo, elige un número de la lista:");
-  		    		      seleccionSerie = validacionIngresos(entrada);
-  		       
-  		              }
-  		                  SerieDeTV serieElegida = listaSeries.get(seleccionSerie - 1);
-                          serieElegida.mostrarDetalles();
-         
-         
-      			break;
-      			
+  		    	              while (seleccionSerie < 1 || seleccionSerie > listaSeries.size()) {
+  		    		              System.out.println("Error! Valor ingresado erroneo, elige un número de la lista:");
+  		    		              seleccionSerie = validacionIngresos(entrada);
+  		          
+  		                      }
+  		                          SerieDeTV serieElegida = listaSeries.get(seleccionSerie - 1);
+                                  serieElegida.mostrarDetalles();
+                break;
+           
       		  case 3:
-      			  System.out.println("\nLista de Series:");
+      			  System.out.println("\nLista de Documentales:\n");
 		              for (int i = 0; i < listaDocumentales.size(); i++) {
 		                  System.out.println((i + 1) + ". " + listaDocumentales.get(i).getTitulo());
-	              }
+	                  }
 		    
-		                  System.out.print("Elige el número de la serie que deseas ver: ");
+		                  System.out.print("Elige el número del Documental que deseas ver:\n ");
 		                  int seleccionDoc = validacionIngresos(entrada);
+		                  if (seleccionDoc == 6) {
+		                	  System.out.println("Adios! Vuelve pronto");
+		                      break;}
+		                      
+		    	              while (seleccionDoc < 1 || seleccionDoc > listaDocumentales.size()) {
+		    		              System.out.println("Error! Valor ingresado erroneo, elige un número de la lista:");
+		    		              seleccionDoc = validacionIngresos(entrada);
+		        
+		                  }
+		                          Documental docElegido = listaDocumentales.get(seleccionDoc - 1);
+                                  docElegido.mostrarDetalles();
+      			break;
+      		
+      		  case 4:
+      		      System.out.println("\nLista de Videos Musicales:");
+		              for (int i = 0; i < listaVideosMusicales.size(); i++) {
+		                  System.out.println((i + 1) + ". " + listaVideosMusicales.get(i).getTitulo());
+	                  }
 		    
+		                  System.out.print("Elige el número del video musical que deseas ver:\n ");
+		                  int seleccionViMu = validacionIngresos(entrada);
+		                  if (seleccionViMu == 6) {
+		                	  System.out.println("Adios! Vuelve pronto");
+		                      break;}
+		                      
 		   
-		    	          while (seleccionDoc < 1 || seleccionDoc > listaDocumentales.size()) {
-		    		      System.out.println("Error! Valor ingresado erroneo, elige un número de la lista:");
-		    		      seleccionDoc = validacionIngresos(entrada);
+		    	              while (seleccionViMu < 1 || seleccionViMu > listaVideosMusicales.size()) {
+		    		              System.out.println("Error! Valor ingresado erroneo, elige un número de la lista:");
+		    		              seleccionViMu = validacionIngresos(entrada);
 		       
-		              }
-		                  Documental docElegido = listaDocumentales.get(seleccionDoc - 1);
-                          docElegido.mostrarDetalles();
-      			break;
-      		case 4:
-      			for (int i = 0; i < listaVideosMusicales.size(); i++) {
-      				System.out.println((i + 1) + "." +  listaVideosMusicales.get(i).getTitulo());
-      			}
-      			break;
-      		case 5:
-      			for (int i = 0; i < listaPodcasts.size(); i++) {
-      				System.out.println((i + 1) + "." +  listaPodcasts.get(i).getTitulo());
-      			}
-      			break;
+		                      }
+		                          VideoMusical ViMuElegido = listaVideosMusicales.get(seleccionViMu - 1);
+                                  ViMuElegido.mostrarDetalles();
+      		    break;
+      	    
+      		  case 5:
+     			  System.out.println("\nLista de Podcasts:\n");
+	                  for (int i = 0; i < listaPodcasts.size(); i++) {
+	                      System.out.println((i + 1) + ". " + listaPodcasts.get(i).getTitulo());
+                    }
+	    
+	                      System.out.print("Elige el número del Podcast que deseas ver:\n ");
+	                      int seleccionPod = validacionIngresos(entrada);
+	                      if (seleccionPod == 6) {
+		                	  System.out.println("Adios! Vuelve pronto");
+		                      break;}
+		                      
+	   
+	    	                  while (seleccionPod < 1 || seleccionPod > listaPodcasts.size()) {
+	    		                  System.out.println("Error! Valor ingresado erroneo, elige un número de la lista:");
+	    		                  seleccionPod = validacionIngresos(entrada);
+	       
+	                          }
+	                              Podcast podElegido = listaPodcasts.get(seleccionPod - 1);
+                                  podElegido.mostrarDetalles();
+      		      
+      		   
+      		   break;
       	
       		}
       
       	}
       
-      
-      
-    
-      
-      
-      
-		
-      
-      
-      
-      /* ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[3];
-        contenidos[0] = new Pelicula("Avatar", 125, "Accion", "20th Century Studios");
-        contenidos[1] = new SerieDeTV("Game of Thrones", 60, "Fantasy", 8);
-        contenidos[2] = new Documental("Cosmos", 45, "Science", "Astronomy",null);
-
-        // Mostrar los detalles de cada contenido audiovisual
-        for (ContenidoAudiovisual contenido : contenidos) {
-            contenido.mostrarDetalles();
-        }*/
     }
-		// Se crea un metodo para validar los ingresos de datos desde el usuario
+		// Se crea un metodo para validar que el dato ingresado sea un numero
 		public static int validacionIngresos(Scanner scanner) {
 		    int numero = 0;
 		    boolean entradaValida = false;
@@ -209,10 +235,11 @@ public class PruebaAudioVisual {
 		            numero = scanner.nextInt();
 		            entradaValida = true;       
 		        } catch (java.util.InputMismatchException e) {
-		            System.out.println("Error! Debes ingresar un valor correcto");
-		            System.out.print("Escribe un numero para elegir la opcion correcta: ");
+		            System.out.println("Error! Debes elegir una opcion valida:");
+		           
 		            scanner.next();
 		        }
+		   
 		    }
 		    return numero;
 		}	

@@ -1,4 +1,4 @@
-package uni1a;
+package ups.soft.poo.tarea_u2;
 import java.util.ArrayList;
 // Se crea la clase
 public class Temporada {
