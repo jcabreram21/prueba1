@@ -28,11 +28,14 @@ public class Pelicula extends ContenidoAudiovisual {
     @Override
     public void mostrarDetalles() {
         System.out.println("Detalles de la película:");
-        System.out.println("ID: " + getId());
         System.out.println("Título: " + getTitulo());
         System.out.println("Duración en minutos: " + getDuracionEnMinutos());
         System.out.println("Género: " + getGenero());
         System.out.println("Estudio: " + estudio);
-        System.out.println();
+        System.out.println("Actores principales:");
+       
+        for (Actor actor : actores) {
+            System.out.println("- " + actor.getNombre());
+        }
     }
 }

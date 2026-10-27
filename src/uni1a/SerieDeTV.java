@@ -48,6 +48,11 @@ public class SerieDeTV extends ContenidoAudiovisual {
         System.out.println("Duración en minutos: " + getDuracionEnMinutos());
         System.out.println("Género: " + getGenero());
         System.out.println("Temporadas: " + this.totalTemporadas);
-      
+       
+        for(Temporada t : temporadas) {
+            System.out.println("- Temporada " + t.getNumTemporada() + " (" + t.getNumCapitulos() + " episodios)");
+    
+        }
     }
 }
+	
