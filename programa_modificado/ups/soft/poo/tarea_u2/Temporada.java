@@ -1,11 +1,11 @@
 package ups.soft.poo.tarea_u2;
-import java.util.ArrayList;
+
 // Se crea la clase
 public class Temporada {
 	private int numTemporada;
 	private int numCapitulos;
-	private ArrayList<Temporada> temporadas = new ArrayList<>();
-// Se crea el constructor y metodo que se usarán posteriormente
+	
+	// Se crea el constructor y metodo que se usarán posteriormente
 public Temporada(int numTemporada, int numCapitulos ) {
 	this.numTemporada = numTemporada;
 	this.numCapitulos = numCapitulos;
